@@ -22,15 +22,11 @@ Replicate API の **Qwen Image Edit** を呼び出し、アップロードした
    ```bash
    git clone https://github.com/USER/qwen-image-edit-gui.git
    cd qwen-image-edit-gui
-依存をインストール
-
-bash
-コードをコピーする
-pip install -r requirements.txt
-環境変数を設定（Replicate API キー）
-
-bash
-コードをコピーする
+2. 依存をインストール
+   ```bash
+   pip install -r requirements.txt
+   
+3. 環境変数を設定（Replicate API キー）
 # Windows
 set REPLICATE_API_TOKEN=your_api_token
 
@@ -38,8 +34,7 @@ set REPLICATE_API_TOKEN=your_api_token
 export REPLICATE_API_TOKEN=your_api_token
 起動
 
-bash
-コードをコピーする
+
 python app.py
 ブラウザで開く
 http://127.0.0.1:7860
@@ -47,8 +42,7 @@ http://127.0.0.1:7860
 デモ
 一時公開（任意）: Cloudflare Tunnel
 
-bash
-コードをコピーする
+
 cloudflared tunnel --url http://localhost:7860
 出力される https://*.trycloudflare.com を共有してください。
 
