@@ -43,15 +43,15 @@ export REPLICATE_API_TOKEN=your_api_token
    ```bash
    http://127.0.0.1:7860
 
-##デモ
-   一時公開（任意）: Cloudflare Tunnel
+## デモ
+一時公開（任意）: Cloudflare Tunnel
    
    cloudflared tunnel --url http://localhost:7860
    
-   出力される https://*.trycloudflare.com を共有してください。
+出力される https://*.trycloudflare.com を共有してください。
 
 
-##ロードマップ
+## ロードマップ
 ComfyUI + IP-Adapter 連携で 参照画像による服装転写 を実現
 
 Instagram 自動投稿パイプライン連携
