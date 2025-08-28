@@ -1,85 +1,63 @@
-Qwen Image Edit GUI (AI Fashion Model Prototype)
-📖 概要
+# Qwen Image Edit GUI — AI Fashion Model Prototype
 
-このプロジェクトは、Replicate API の Qwen Image Edit モデルを利用し、
-入力画像の服装をテキスト指示に従って別スタイルに置き換える AI 画像編集ツールです。
+Instagram 向けの **AIファッションモデル運用** を想定した画像編集ツールのプロトタイプです。  
+Replicate API の **Qwen Image Edit** を呼び出し、アップロードした画像の服装をテキスト指示で差し替えます。  
+フロントは **Gradio** で、ブラウザから直感的に操作できます。
 
-目的は、Instagram での AI ファッションモデル運用に向けたプロトタイプ開発。
-Gradio を用いて簡易 GUI を構築しており、誰でもブラウザから直感的に操作できます。
+## 特徴
+- 画像の複数アップロード
+- テキストプロンプトで服装差し替え
+- 逐次処理のバッチ編集
+- 実行結果の表示・保存（ZIP化は任意）
+- Cloudflare Tunnel で外部共有デモが可能
 
-✨ 特徴
+## 技術スタック
+- Python / Gradio
+- Replicate API (Qwen Image Edit)
+- Cloudflare Tunnel
+- GitHub Actions（CI/CD 予定）
 
-🖼️ 画像アップロード（複数対応）
+## 使い方
+1. リポジトリを取得
+   ```bash
+   git clone https://github.com/USER/qwen-image-edit-gui.git
+   cd qwen-image-edit-gui
+依存をインストール
 
-📝 テキストプロンプトによる服装差し替え
-
-🔄 逐次処理によるバッチ編集
-
-📂 実行結果をブラウザ上に表示＆保存
-
-🌐 Cloudflare Tunnel を利用した外部アクセス対応
-
-🛠 技術スタック
-
-フロントエンド / ツール
-
-Python（メインロジック）
-
-Gradio（GUI 構築）
-
-バックエンド
-
-Replicate API（Qwen Image Edit モデル呼び出し）
-
-インフラ / 運用
-
-Cloudflare Tunnel（デモ共有用）
-
-GitHub Actions（CI/CD 管理予定）
-
-🚀 実行方法
-
-このリポジトリを clone
-
-git clone https://github.com/ユーザー名/qwen-image-edit-gui.git
-cd qwen-image-edit-gui
-
-
-必要ライブラリをインストール
-
+bash
+コードをコピーする
 pip install -r requirements.txt
+環境変数を設定（Replicate API キー）
 
-
-Replicate API キーを環境変数に設定
-
+bash
+コードをコピーする
 # Windows
-set REPLICATE_API_TOKEN=your_api_token_here  
+set REPLICATE_API_TOKEN=your_api_token
 
 # macOS / Linux
-export REPLICATE_API_TOKEN=your_api_token_here
+export REPLICATE_API_TOKEN=your_api_token
+起動
 
-
-アプリを起動
-
+bash
+コードをコピーする
 python app.py
-
-
-ブラウザでアクセス
-
+ブラウザで開く
 http://127.0.0.1:7860
 
-🖼️ デモイメージ
+デモ
+一時公開（任意）: Cloudflare Tunnel
 
-（ここにスクリーンショットを追加）
+bash
+コードをコピーする
+cloudflared tunnel --url http://localhost:7860
+出力される https://*.trycloudflare.com を共有してください。
 
-🔮 今後の展望
+ロードマップ
+ComfyUI + IP-Adapter 連携で 参照画像による服装転写 を実現
 
-ComfyUI を組み込んで 参照画像による服装転写 を実現
+Instagram 自動投稿パイプライン連携
 
-Instagram 自動投稿との連携
+EC / バーチャル試着への応用
 
-EC/ファッション分野での応用（試着システム、バーチャルモデル）
-
-📜 ライセンス
-
-MIT License
+ライセンス
+MIT
