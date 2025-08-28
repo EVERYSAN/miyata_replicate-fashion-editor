@@ -36,7 +36,7 @@ set REPLICATE_API_TOKEN=your_api_token
 export REPLICATE_API_TOKEN=your_api_token
 
 5. 起動
-   ```bash
+   
    python app.py
 
 6. ブラウザで開く
@@ -44,19 +44,19 @@ export REPLICATE_API_TOKEN=your_api_token
    http://127.0.0.1:7860
 
 ## デモ
-一時公開（任意）: Cloudflare Tunnel
-   
+- 一時公開（任意）: Cloudflare Tunnel
+   ```bash
    cloudflared tunnel --url http://localhost:7860
    
-出力される https://*.trycloudflare.com を共有してください。
+- 出力される https://*.trycloudflare.com を共有してください。
 
 
 ## ロードマップ
-ComfyUI + IP-Adapter 連携で 参照画像による服装転写 を実現
+- ComfyUI + IP-Adapter 連携で 参照画像による服装転写 を実現
 
-Instagram 自動投稿パイプライン連携
+- Instagram 自動投稿パイプライン連携
 
-EC / バーチャル試着への応用
+- EC / バーチャル試着への応用
 
-ライセンス
+## ライセンス
 MIT
